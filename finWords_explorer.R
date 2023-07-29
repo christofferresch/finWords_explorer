@@ -120,11 +120,13 @@ count_special_chars <- function(text) {
 
 
 # Selecting sentence_id and lemma
-terms <- df_all %>% 
-  mutate(special_chars_count = sapply(lemma, count_special_chars)
+terms <- df_all %>%
+  mutate(
+    lemma = tolower(lemma),
+    special_chars_count = sapply(lemma, count_special_chars)
   ) %>%
   filter(special_chars_count < 1) %>%
-  filter(upos %in% c("NOUN","ADJ", "PROPN")) %>% 
+  filter(upos %in% c("NOUN", "PART", "ADJ", "PROPN")) %>% 
   select("sentence_id","lemma") 
 
 # Change lemmas tolower
@@ -150,7 +152,7 @@ pal2 <- brewer.pal(6,"Dark2")
 # Daily wordcloud for 4 financial newsjournals in Norway
 wordcloud(words = term_count$`terms$lemma`,
           freq = term_count$n,
-          min.freq = 2,
+          min.freq = 1,
           max.words = 100,
           col= pal2,
           scale = c(3,.25),
