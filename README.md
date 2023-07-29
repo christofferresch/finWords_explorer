@@ -8,6 +8,7 @@ This repository aims to explore the top 10 most frequently used words in the thr
 
 
 
-<img width="260" alt="image" src="https://github.com/christofferresch/finWords_explorer/assets/103109383/97869224-f5c3-4d83-8c40-86ba3c0ca829">
+<img width="312" alt="image" src="https://github.com/christofferresch/finWords_explorer/assets/103109383/6ca060ed-2ab2-4211-91c3-6c3af349fdcb">
 
--------------------- 29th of July 2023 at 17:14 -------------------- 
+
+-------------------- 29th of July 2023 at 17:33 -------------------- 
